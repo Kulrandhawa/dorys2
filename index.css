@@ -14,7 +14,7 @@ body {
 
 p {
 	font-size: .95em;
-	margin-bottom: 1.5em;
+	margin-bottom: 3em;
 }
 
 h1,
@@ -22,6 +22,7 @@ h3 {
   text-align: center;
 }
 
+h1,
 h2,
 h3,
 a {
@@ -30,7 +31,8 @@ a {
 
 h2,
 h3 {
-	margin-top: 0;
+	margin-top: 1em;
+	margin-bottom: 0;
 }
 
 a {
@@ -84,9 +86,13 @@ a {
 
 .main-header {
   text-align: center;
-	padding: 1em 0;
+	/*padding: 1em 0;*/
 	background-color: #F1E291;
 	margin-bottom: 30px;
+
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+
 }
 
 
@@ -96,11 +102,61 @@ a {
 	background: #d9e4ea;
 }
 
+.email {
+	margin-top: -55px;
+}
+
+.dorysmap {
+  width: 60%;
+  height: 550px;
+	margin-top: 5em;
+}
+
+.icon-location {
+  width: 60px;
+  position: absolute;
+  top: 40px;
+  right: 17%;
+  z-index: 2;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+  position: relative;
+
+}
+
+figcaption {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;
+	background: rgba(19,43,102, .85);
+  position: absolute;
+  width: 60%;
+  bottom: 0;
+	margin-left: 20%;
+}
+
 /* =================================
   Media Queries
 ==================================== */
 
-@media (min-width: 769px) {
+@media (min-width: 769px),
+       (min-width: 700px) and (orientation: landscape) {
+
+	body {
+	  padding-top: 96px;
+	}
+
+	.main-header {
+	  position: fixed;
+	  box-shadow: 0 1px 4px rgba(0,0,0,.4);
+	  width: 100%;
+	  top: 0;
+		z-index: 1000;
+	}
 
 	.wrap {
 		min-height: calc(100vh - 89px);
@@ -112,14 +168,23 @@ a {
 		margin: 0 auto;
 	}
 
-  .name,
-  .main-nav,
-  .main-nav li {
-    display: inline-block;
-  }
+	.name,
+	.main-nav,
+	.main-nav li {
+	  display: inline-block;
+	}
+
+	.name {
+		width: 280px;
+		margin-right: 50px;
+	}
 
 	.main-nav li {
-	  margin-right: 15px;
+		margin-right: 12px;
+	}
+  /*
+	.main-nav li {
+	  margin-right: 12px;
 		float: left;
 	}
 
@@ -129,7 +194,7 @@ a {
 
   .name {
 		float: left;
-  }
+  }*/
 
 .col {
   display: inline-block;
